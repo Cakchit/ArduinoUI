@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="420.0" prefWidth="1060.0" stylesheets="@sample.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <Label layoutX="33.0" layoutY="77.0" text="Ki" />
+   <Label layoutX="31.0" layoutY="111.0" text="Kd" />
+   <Label layoutX="31.0" layoutY="147.0" text="Kp" />
+   <Label layoutX="253.0" layoutY="330.0" text="Kugel-x" />
+   <Label layoutX="252.0" layoutY="369.0" text="Kugel-y" />
+   <TextField fx:id="txtFieldKi" layoutX="107.0" layoutY="72.0" text="1" />
+   <TextField fx:id="txtFieldKd" layoutX="107.0" layoutY="106.0" text="1" />
+   <TextField fx:id="txtFieldKp" layoutX="107.0" layoutY="142.0" text="1" />
+   <ComboBox fx:id="cBComPort" layoutX="126.0" layoutY="25.0" prefWidth="150.0" />
+   <Label layoutX="17.0" layoutY="30.0" text="Com-Port" />
+   <Button layoutX="304.0" layoutY="25.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+   <Button layoutX="307.0" layoutY="255.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+   <Button layoutX="304.0" layoutY="173.0" mnemonicParsing="false" onAction="#getValues" text="getValues" />
+   <Pane id="paneCoordinate" fx:id="paneXY" layoutX="561.0" layoutY="50.0" onMouseClicked="#mouseClick" prefHeight="420.0" prefWidth="660.0" styleClass="pane" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+         <Line layoutX="115.0" layoutY="405.0" startX="-100.0" />
+         <Line endX="-100.0" endY="-100.0" layoutX="114.0" layoutY="405.0" startX="-100.0" />
+         <Text layoutX="15.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y" />
+         <Text layoutX="111.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" />
+         <Ellipse fill="DODGERBLUE" layoutX="330.0" layoutY="210.0" radiusX="4.0" radiusY="4.0" stroke="BLACK" strokeType="INSIDE" />
+      </children>
+   </Pane>
+   <Label fx:id="lblX" layoutX="347.0" layoutY="330.0" text="1" />
+   <Label fx:id="lblY" layoutX="347.0" layoutY="369.0" text="1" />
+</AnchorPane>
